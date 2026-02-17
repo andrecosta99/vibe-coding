@@ -157,12 +157,15 @@
 
     feedbackEl.textContent = `${correctCount} de ${correctOrder.length} na posição correta.`;
 
+    // Save best score even for partial attempts
+    const prev = Store.getBest('ordering', currentTheme);
+    if (prev === null || correctCount > prev) {
+      Store.setBest('ordering', currentTheme, correctCount);
+      updateBestDisplay();
+    }
+
     if (correctCount === correctOrder.length) {
       // All correct — show result
-      const prev = Store.getBest('ordering', currentTheme);
-      if (prev === null || correctCount > prev) {
-        Store.setBest('ordering', currentTheme, correctCount);
-      }
       setTimeout(() => showResult(correctCount), 600);
     }
   });

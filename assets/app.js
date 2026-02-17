@@ -43,15 +43,46 @@ function renderHeader(crumbs) {
  * Simple localStorage helpers scoped per game.
  */
 const Store = {
+  _memory: {},
+  _storageReady: null,
+  _canUseStorage() {
+    if (this._storageReady !== null) return this._storageReady;
+    try {
+      const probe = '__vibe_store_probe__';
+      localStorage.setItem(probe, '1');
+      localStorage.removeItem(probe);
+      this._storageReady = true;
+    } catch {
+      this._storageReady = false;
+    }
+    return this._storageReady;
+  },
   _key(game, theme, extra) {
     return `vibe_${game}_${theme}${extra ? '_' + extra : ''}`;
   },
   getBest(game, theme, extra) {
-    const v = localStorage.getItem(this._key(game, theme, extra));
-    return v !== null ? JSON.parse(v) : null;
+    const k = this._key(game, theme, extra);
+    if (!this._canUseStorage()) {
+      return Object.prototype.hasOwnProperty.call(this._memory, k) ? this._memory[k] : null;
+    }
+    try {
+      const v = localStorage.getItem(k);
+      return v !== null ? JSON.parse(v) : null;
+    } catch {
+      return null;
+    }
   },
   setBest(game, theme, value, extra) {
-    localStorage.setItem(this._key(game, theme, extra), JSON.stringify(value));
+    const k = this._key(game, theme, extra);
+    if (!this._canUseStorage()) {
+      this._memory[k] = value;
+      return;
+    }
+    try {
+      localStorage.setItem(k, JSON.stringify(value));
+    } catch {
+      this._memory[k] = value;
+    }
   }
 };
 
