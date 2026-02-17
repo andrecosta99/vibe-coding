@@ -15,7 +15,10 @@ function renderHeader(crumbs) {
   header.innerHTML = `
     <div class="site-header__inner">
       <div class="site-header__title"><a href="${homeHref}">Vibe Playground</a></div>
-      <button class="header-author-btn" id="open-author-modal" aria-label="Sobre o autor">Sobre o Autor</button>
+      <div class="header-actions">
+        <a class="header-github-link" href="https://github.com/andrecosta99/vibe-coding" target="_blank" rel="noopener" aria-label="Ver projeto no GitHub">GitHub</a>
+        <button class="header-author-btn" id="open-author-modal" aria-label="Sobre o autor">Sobre o Autor</button>
+      </div>
     </div>`;
 
   // Render breadcrumbs inside .container (before first child), only if more than 1 crumb
@@ -92,8 +95,6 @@ function renderFooter(basePath) {
       <p class="author-subtitle">Professor Universitário &bull; Produto Digital &bull; IA</p>
       <div class="author-bio">
         <p>André F. Costa é Professor Universitário nas áreas de Produto Digital e Tecnologias Web, tendo formado centenas de alunos entre Portugal e Brasil ao longo da última década. Trabalha na interseção entre design, tecnologia e Inteligência Artificial, com foco na criação e desenvolvimento de produtos digitais e startups tecnológicas.</p>
-        <p>Ao longo do seu percurso profissional, participou em diversos projetos digitais nacionais e internacionais, incluindo colaboração na implementação dos Apple Maps em Portugal. Dinamiza regularmente formações em organizações tecnológicas de referência em Portugal, Brasil, Angola e Cabo Verde.</p>
-        <p>É convidado em eventos de tecnologia como o Web Summit, Tech Summit e CESAE Digital, entre outros. É autor do capítulo "Inteligência Artificial e o Futuro do Trabalho" no livro luso-brasileiro <em>Negócios e Carreiras II</em> e possui trabalhos científicos publicados na área da Inteligência Artificial. Enquanto empreendedor tecnológico, é fundador de dois produtos digitais online com faturação combinada superior a 100 mil euros (mais de 500 mil reais).</p>
       </div>
       <div class="author-socials">
         <a href="https://www.youtube.com/@superhumano-ai" target="_blank" rel="noopener">&#9654; YouTube</a>

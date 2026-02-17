@@ -1,78 +1,40 @@
 # Vibe Playground
 
-Uma coleção de micro-apps 100 % estáticas para demonstrar Vibe Coding.
+Vibe Playground e uma colecao de micro-produtos digitais com jogos e ferramentas uteis para o dia a dia.
 
-## Como executar
+## Aceder ja
 
-O projeto é inteiramente estático (HTML/CSS/JS puro) — não precisa de build, backend ou dependências externas.
+Usa a versao online:
 
-### Opção 1 — Abrir diretamente no browser
-Abre o ficheiro `index.html` no teu browser (duplo-clique ou `File → Open`).
+**https://vibe-coding-webapps.netlify.app**
 
-> **Nota:** Alguns browsers podem restringir `localStorage` em `file://`. Se tiveres problemas, usa a opção 2.
+## Como usar no teu computador
 
-### Opção 2 — Servidor local (recomendado)
-```bash
-# Com Python 3
-python3 -m http.server 8000
+1. Faz download do projeto (ZIP) e extrai.
+2. Abre a pasta.
+3. Faz duplo clique em `index.html`.
 
-# Ou com Node.js (npx)
-npx serve .
-```
-Depois abre `http://localhost:8000` no browser.
+Pronto, a plataforma abre no browser.
 
-## Estrutura do projeto
-```
-/
-├── index.html                  # Página inicial
-├── assets/
-│   ├── styles.css              # Estilos globais
-│   ├── app.js                  # Helpers partilhados
-│   └── img/
-│       └── andrefcosta.png     # Foto do autor
-├── categories/
-│   ├── games/
-│   │   ├── index.html          # Lista de jogos
-│   │   ├── quiz/               # Quiz multi-tema
-│   │   ├── memory/             # Jogo da memória
-│   │   ├── reaction/           # Tempo de reação
-│   │   └── ordering/           # Ordenação (drag & drop)
-│   ├── productivity/
-│   │   ├── index.html          # Lista de ferramentas
-│   │   ├── checklist/          # Checklist de projeto
-│   │   ├── eisenhower/         # Matriz de Eisenhower
-│   │   ├── todo/               # Lista de tarefas
-│   │   └── pomodoro/           # Pomodoro + Deep Work
-│   ├── utilities/
-│   │   ├── index.html          # Lista de utilitários
-│   │   ├── converter/          # Conversor de unidades
-│   │   ├── password/           # Gerador de palavras-passe
-│   │   ├── random/             # Gerador aleatório
-│   │   └── calculator/         # Calculadora
-│   └── creativity/
-│       ├── index.html          # Lista de ferramentas criativas
-│       ├── drawing/            # Quadro de desenho
-│       ├── beatmaker/          # Batida musical (sequenciador)
-│       ├── stories/            # Gerador de histórias
-│       └── emoji/              # Criador de emojis
-└── README.md
-```
+## O que vais encontrar
 
-## Categorias
+- Jogos Educativos: Quiz, Memoria, Tempo de Reacao e Ordenacao.
+- Produtividade: Checklist de Projeto, Matriz de Eisenhower, To-Do e Pomodoro.
+- Utilitarios: Conversor, Gerador de Passwords, Aleatorio e Calculadora.
+- Criatividade: Desenho, Beatmaker, Historias e Emoji Builder.
 
-| Categoria         | Estado         | Apps |
-|-------------------|----------------|------|
-| Jogos Educativos  | Implementado   | Quiz, Memória, Reação, Ordenação |
-| Produtividade     | Implementado   | Checklist, Eisenhower, To-Do, Pomodoro |
-| Utilitários       | Implementado   | Conversor, Palavras-passe, Aleatório, Calculadora |
-| Criatividade      | Implementado   | Desenho, Batida Musical, Histórias, Emojis |
+## Para quem e
 
-## Tecnologias
-- HTML5, CSS3, JavaScript (ES6+)
-- Web Audio API (batida musical)
-- Canvas API (quadro de desenho)
-- Sem frameworks, sem CDN, sem backend
-- Funciona offline
+- Estudantes
+- Profissionais
+- Criadores de conteudo
+- Qualquer pessoa que queira treinar logica, foco e organizacao de forma simples
+
+## Projeto
+
+- Link do repositorio: https://github.com/andrecosta99/vibe-coding
+- Site em producao: https://vibe-coding-webapps.netlify.app
 
 ## Autor
-Desenvolvido por [Superhumano](https://superhumano.ai) e [André F. Costa](https://andrefcosta.com)
+
+Desenvolvido por [SuperHumano AI](https://superhumano.ai) e [Andre F. Costa](https://andrefcosta.com)

@@ -59,18 +59,31 @@ img, svg { display: block; max-width: 100%; }
   color: var(--clr-primary);
 }
 .site-header__title a { color: inherit; }
-.header-author-btn {
-  background: none;
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.header-author-btn,
+.header-github-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--clr-border);
   border-radius: var(--radius);
   padding: .35rem .85rem;
   font-size: .8rem;
-  cursor: pointer;
   color: var(--clr-primary);
   font-weight: 600;
+  line-height: 1.1;
+  font-family: inherit;
+  background: var(--clr-surface);
+  text-decoration: none;
   transition: background .15s, border-color .15s;
 }
-.header-author-btn:hover { background: #eef2ff; border-color: var(--clr-primary); }
+.header-author-btn { cursor: pointer; }
+.header-author-btn:hover,
+.header-github-link:hover { background: #eef2ff; border-color: var(--clr-primary); text-decoration: none; }
 
 /* ---------- Breadcrumb (inside .container) ---------- */
 .breadcrumb {
