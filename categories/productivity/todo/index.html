@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas — Vibe Playground</title>
+  <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner"></header>
+
+  <main class="container">
+    <h1 class="mb-1">Lista de Tarefas</h1>
+
+    <div class="game-area">
+      <div class="game-instructions">
+        Uma lista de tarefas completa com prioridade, estado, pesquisa, filtros e ordenação. Tudo guardado localmente.
+      </div>
+
+      <!-- Add task form -->
+      <details open style="margin-bottom:1rem">
+        <summary style="cursor:pointer;font-weight:600;font-size:.9rem;margin-bottom:.75rem">+ Nova Tarefa</summary>
+        <div style="display:flex;flex-direction:column;gap:.65rem">
+          <div class="form-group" style="margin:0">
+            <label for="new-title">Título</label>
+            <input type="text" id="new-title" placeholder="Título da tarefa">
+          </div>
+          <div class="form-group" style="margin:0">
+            <label for="new-desc">Descrição (opcional)</label>
+            <textarea id="new-desc" rows="2" placeholder="Descrição…"></textarea>
+          </div>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+            <div class="form-group" style="margin:0;flex:1;min-width:120px">
+              <label for="new-priority">Prioridade</label>
+              <select id="new-priority">
+                <option value="baixa">Baixa</option>
+                <option value="media" selected>Média</option>
+                <option value="alta">Alta</option>
+              </select>
+            </div>
+            <div class="form-group" style="margin:0;flex:1;min-width:120px">
+              <label for="new-status">Estado</label>
+              <select id="new-status">
+                <option value="por-fazer" selected>Por fazer</option>
+                <option value="em-curso">Em curso</option>
+                <option value="concluida">Concluída</option>
+              </select>
+            </div>
+          </div>
+          <button id="add-task-btn" class="btn btn-primary">Adicionar Tarefa</button>
+        </div>
+      </details>
+
+      <!-- Counters -->
+      <div id="counters" class="todo-counters"></div>
+
+      <!-- Filters & search -->
+      <div class="todo-controls">
+        <div class="form-group">
+          <label for="search-input">Pesquisa</label>
+          <input type="text" id="search-input" placeholder="Pesquisar…" aria-label="Pesquisar tarefas">
+        </div>
+        <div class="form-group">
+          <label for="filter-priority">Prioridade</label>
+          <select id="filter-priority">
+            <option value="all">Todas</option>
+            <option value="alta">Alta</option>
+            <option value="media">Média</option>
+            <option value="baixa">Baixa</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="filter-status">Estado</label>
+          <select id="filter-status">
+            <option value="all">Todos</option>
+            <option value="por-fazer">Por fazer</option>
+            <option value="em-curso">Em curso</option>
+            <option value="concluida">Concluída</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="sort-select">Ordenar</label>
+          <select id="sort-select">
+            <option value="newest">Mais recente</option>
+            <option value="oldest">Mais antigo</option>
+            <option value="priority">Prioridade (alta→baixa)</option>
+            <option value="alpha">Alfabético</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Task list -->
+      <div id="task-list" class="todo-list"></div>
+      <p id="empty-msg" class="hidden" style="text-align:center;color:var(--clr-text-muted);padding:2rem 0">Nenhuma tarefa encontrada.</p>
+    </div>
+  </main>
+
+  <script src="../../../assets/app.js"></script>
+  <script src="app.js"></script>
+  <script>
+    renderHeader([
+      { label: 'Início', href: '../../../index.html' },
+      { label: 'Produtividade', href: '../index.html' },
+      { label: 'Tarefas', href: 'index.html' }
+    ]);
+    renderFooter('../../../');
+  </script>
+</body>
+</html>

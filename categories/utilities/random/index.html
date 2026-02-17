@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador Aleatório — Vibe Playground</title>
+  <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner"></header>
+
+  <main class="container">
+    <h1 class="mb-1">Gerador Aleatório</h1>
+
+    <div class="game-area">
+      <div class="game-instructions">
+        Gera números, cores, dados ou nomes aleatórios. Escolhe o modo e clica "Gerar".
+      </div>
+
+      <div class="form-group">
+        <label for="mode-select">Modo</label>
+        <select id="mode-select" aria-label="Modo do gerador">
+          <option value="number">Número</option>
+          <option value="dice">Dado (1-6)</option>
+          <option value="color">Cor Aleatória</option>
+          <option value="name">Nome Aleatório</option>
+          <option value="coin">Moeda (Cara/Coroa)</option>
+        </select>
+      </div>
+
+      <!-- Number options -->
+      <div id="number-options" class="converter-row">
+        <div class="form-group">
+          <label for="num-min">Mínimo</label>
+          <input type="number" id="num-min" value="1">
+        </div>
+        <div class="form-group">
+          <label for="num-max">Máximo</label>
+          <input type="number" id="num-max" value="100">
+        </div>
+      </div>
+
+      <div style="text-align:center">
+        <button id="generate-btn" class="btn btn-primary" style="font-size:1rem;padding:.65rem 2rem">Gerar</button>
+      </div>
+
+      <div id="output" class="random-output" aria-live="polite">—</div>
+
+      <h3 style="font-size:.9rem;margin-top:1rem;margin-bottom:.5rem">Histórico</h3>
+      <ul id="history" class="random-history"></ul>
+    </div>
+  </main>
+
+  <script src="../../../assets/app.js"></script>
+  <script src="app.js"></script>
+  <script>
+    renderHeader([
+      { label: 'Início', href: '../../../index.html' },
+      { label: 'Utilitários', href: '../index.html' },
+      { label: 'Aleatório', href: 'index.html' }
+    ]);
+    renderFooter('../../../');
+  </script>
+</body>
+</html>

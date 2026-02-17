@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criatividade — Vibe Playground</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner"></header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Criatividade</h1>
+      <p>Ferramentas criativas para desenhar, criar música, gerar histórias e compor emojis.</p>
+    </section>
+
+    <div class="card-grid" role="list">
+      <a href="drawing/index.html" class="card" role="listitem" aria-label="Quadro de Desenho">
+        <div class="card__icon">🖌️</div>
+        <div class="card__title">Quadro de Desenho</div>
+        <div class="card__desc">Desenha livremente com cores, espessuras e borracha.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+
+      <a href="beatmaker/index.html" class="card" role="listitem" aria-label="Batida Musical">
+        <div class="card__icon">🎵</div>
+        <div class="card__title">Batida Musical</div>
+        <div class="card__desc">Cria padrões rítmicos com um sequenciador visual de 16 passos.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+
+      <a href="stories/index.html" class="card" role="listitem" aria-label="Gerador de Histórias">
+        <div class="card__icon">✍️</div>
+        <div class="card__title">Gerador de Histórias</div>
+        <div class="card__desc">Gera inícios de histórias aleatórias com personagens e cenários.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+
+      <a href="emoji/index.html" class="card" role="listitem" aria-label="Criador de Emojis">
+        <div class="card__icon">🎭</div>
+        <div class="card__title">Criador de Emojis</div>
+        <div class="card__desc">Combina partes de emojis para criar caras únicas.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+    </div>
+  </main>
+
+  <script src="../../assets/app.js"></script>
+  <script>
+    renderHeader([
+      { label: 'Início', href: '../../index.html' },
+      { label: 'Criatividade', href: 'index.html' }
+    ]);
+    renderFooter('../../');
+  </script>
+</body>
+</html>

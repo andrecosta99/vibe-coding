@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro + Deep Work — Vibe Playground</title>
+  <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner"></header>
+
+  <main class="container">
+    <h1 class="mb-1">Pomodoro + Deep Work</h1>
+
+    <div class="game-area">
+      <div class="game-instructions">
+        Usa o timer de foco para manter a concentração. Alterna entre sessões de trabalho e pausas. Experimenta o modo Focus para distração zero.
+      </div>
+
+      <!-- Mode selection -->
+      <div class="pomodoro-modes">
+        <button class="mode-btn active" data-mode="25-5">25 / 5</button>
+        <button class="mode-btn" data-mode="50-10">50 / 10</button>
+        <button class="mode-btn" data-mode="custom">Personalizado</button>
+      </div>
+
+      <!-- Custom inputs -->
+      <div id="custom-inputs" class="custom-mode-inputs hidden">
+        <label for="custom-work" style="font-size:.85rem;font-weight:600">Trabalho:</label>
+        <input type="number" id="custom-work" value="25" min="1" max="120" aria-label="Minutos de trabalho"> min
+        <label for="custom-break" style="font-size:.85rem;font-weight:600;margin-left:.5rem">Pausa:</label>
+        <input type="number" id="custom-break" value="5" min="1" max="60" aria-label="Minutos de pausa"> min
+      </div>
+
+      <!-- Timer display -->
+      <div class="pomodoro-display">
+        <div id="phase" class="pomodoro-phase">Trabalho</div>
+        <div id="timer" class="pomodoro-timer">25:00</div>
+        <div class="pomodoro-controls">
+          <button id="start-btn" class="btn btn-primary">Iniciar</button>
+          <button id="pause-btn" class="btn btn-sm" style="background:var(--clr-warning);color:#000" disabled>Pausar</button>
+          <button id="reset-btn" class="btn btn-sm" style="background:var(--clr-border)">Reiniciar</button>
+          <button id="focus-btn" class="btn btn-sm" style="background:#1e293b;color:#fff" title="Modo Focus — esconde tudo exceto o timer">Focus</button>
+        </div>
+      </div>
+
+      <!-- Daily stats -->
+      <div class="pomodoro-stats">
+        <span>Sessões hoje: <strong id="sessions-today">0</strong></span>
+        <span>Tempo total de foco: <strong id="focus-total">0 min</strong></span>
+      </div>
+
+      <!-- Session history -->
+      <div class="session-history">
+        <h3 style="font-size:.9rem;margin-bottom:.5rem">Histórico de Sessões</h3>
+        <table>
+          <thead><tr><th>Hora</th><th>Modo</th><th>Duração</th></tr></thead>
+          <tbody id="history-body"></tbody>
+        </table>
+        <p id="no-history" style="font-size:.82rem;color:var(--clr-text-muted);text-align:center;padding:.5rem 0">Nenhuma sessão registada hoje.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../../assets/app.js"></script>
+  <script src="app.js"></script>
+  <script>
+    renderHeader([
+      { label: 'Início', href: '../../../index.html' },
+      { label: 'Produtividade', href: '../index.html' },
+      { label: 'Pomodoro', href: 'index.html' }
+    ]);
+    renderFooter('../../../');
+  </script>
+</body>
+</html>

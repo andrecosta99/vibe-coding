@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quadro de Desenho — Vibe Playground</title>
+  <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner"></header>
+
+  <main class="container">
+    <h1 class="mb-1">Quadro de Desenho</h1>
+
+    <div class="game-area">
+      <div class="game-instructions">
+        Desenha livremente no canvas. Escolhe cor, espessura e usa a borracha. Descarrega a tua criação como imagem.
+      </div>
+
+      <div class="canvas-toolbar">
+        <label for="color-picker">Cor:</label>
+        <input type="color" id="color-picker" value="#4f46e5">
+        <label for="size-range">Tamanho:</label>
+        <input type="range" id="size-range" min="1" max="30" value="4">
+        <button id="eraser-btn" class="btn btn-sm" style="background:var(--clr-border)">Borracha</button>
+        <button id="clear-btn" class="btn btn-danger btn-sm">Limpar</button>
+        <button id="download-btn" class="btn btn-success btn-sm">Descarregar</button>
+      </div>
+
+      <canvas id="drawing-canvas" class="drawing-canvas" width="900" height="500"></canvas>
+    </div>
+  </main>
+
+  <script src="../../../assets/app.js"></script>
+  <script src="app.js"></script>
+  <script>
+    renderHeader([
+      { label: 'Início', href: '../../../index.html' },
+      { label: 'Criatividade', href: '../index.html' },
+      { label: 'Desenho', href: 'index.html' }
+    ]);
+    renderFooter('../../../');
+  </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checklist de Projeto — Vibe Playground</title>
+  <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner"></header>
+
+  <main class="container">
+    <h1 class="mb-1">Checklist de Projeto</h1>
+
+    <div class="game-area">
+      <div class="game-instructions">
+        Cria projetos a partir de modelos reutilizáveis. Adiciona tarefas, marca como concluídas e acompanha o progresso.
+      </div>
+
+      <!-- Tabs: Modelos / Projetos -->
+      <div class="toggle-group mb-1">
+        <button id="tab-templates" class="active" aria-label="Ver modelos">Modelos</button>
+        <button id="tab-projects" aria-label="Ver projetos">Projetos</button>
+      </div>
+
+      <!-- Templates section -->
+      <div id="templates-section">
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0">
+          <button id="new-template-btn" class="btn btn-primary btn-sm">+ Novo Modelo</button>
+        </div>
+        <div id="templates-list" class="project-list"></div>
+      </div>
+
+      <!-- Projects section -->
+      <div id="projects-section" class="hidden">
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0">
+          <button id="new-project-btn" class="btn btn-primary btn-sm">+ Novo Projeto</button>
+          <span style="font-size:.85rem;color:var(--clr-text-muted);align-self:center">ou cria a partir de um modelo</span>
+        </div>
+        <div id="projects-list" class="project-list"></div>
+      </div>
+    </div>
+
+    <!-- Modal: create template/project -->
+    <div id="modal-overlay" class="hidden" style="position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:200;display:flex;align-items:center;justify-content:center;padding:1rem">
+      <div role="dialog" aria-modal="true" aria-labelledby="modal-title" style="background:var(--clr-surface);border-radius:var(--radius);padding:1.5rem;max-width:400px;width:100%;box-shadow:0 8px 30px rgba(0,0,0,.15)">
+        <h3 id="modal-title" style="margin-bottom:1rem"></h3>
+        <div class="form-group">
+          <label for="modal-name">Nome</label>
+          <input type="text" id="modal-name" placeholder="Nome do projeto/modelo">
+        </div>
+        <div id="modal-template-select" class="form-group hidden">
+          <label for="modal-base">Baseado no modelo</label>
+          <select id="modal-base"><option value="">— Vazio —</option></select>
+        </div>
+        <div style="display:flex;gap:.5rem;justify-content:flex-end">
+          <button id="modal-cancel" class="btn btn-sm" style="background:var(--clr-border)">Cancelar</button>
+          <button id="modal-confirm" class="btn btn-primary btn-sm">Criar</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../../assets/app.js"></script>
+  <script src="app.js"></script>
+  <script>
+    renderHeader([
+      { label: 'Início', href: '../../../index.html' },
+      { label: 'Produtividade', href: '../index.html' },
+      { label: 'Checklist', href: 'index.html' }
+    ]);
+    renderFooter('../../../');
+  </script>
+</body>
+</html>

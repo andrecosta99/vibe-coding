@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matriz de Eisenhower — Vibe Playground</title>
+  <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner"></header>
+
+  <main class="container">
+    <h1 class="mb-1">Matriz de Eisenhower</h1>
+
+    <div class="game-area">
+      <div class="game-instructions">
+        Organiza as tuas tarefas em 4 quadrantes. Arrasta entre quadrantes para mudar a prioridade. Usa tags para categorizar.
+      </div>
+
+      <!-- Add task -->
+      <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.75rem">
+        <input type="text" id="task-input" placeholder="Nova tarefa…" style="flex:1;min-width:160px" aria-label="Nova tarefa">
+        <input type="text" id="tag-input" placeholder="Tag (opcional)" style="width:120px" aria-label="Tag">
+        <select id="quadrant-select" style="width:auto" aria-label="Quadrante">
+          <option value="urgent-important">Urgente & Importante</option>
+          <option value="important-not-urgent">Importante & Não Urgente</option>
+          <option value="urgent-not-important">Urgente & Não Importante</option>
+          <option value="not-urgent-not-important">Não Urgente & Não Importante</option>
+        </select>
+        <button id="add-btn" class="btn btn-primary btn-sm">Adicionar</button>
+      </div>
+
+      <!-- Tag filters -->
+      <div id="filter-bar" class="filter-bar">
+        <span style="font-size:.82rem;font-weight:600;color:var(--clr-text-muted)">Filtrar:</span>
+        <button class="tag-filter active" data-tag="all">Todas</button>
+      </div>
+
+      <!-- Matrix -->
+      <div class="eisenhower-grid">
+        <div class="quadrant" data-quadrant="urgent-important">
+          <div class="quadrant__title" style="color:var(--clr-danger)">🔴 Urgente & Importante</div>
+          <div class="quadrant__items" data-quadrant="urgent-important"></div>
+        </div>
+        <div class="quadrant" data-quadrant="important-not-urgent">
+          <div class="quadrant__title" style="color:var(--clr-primary)">🔵 Importante & Não Urgente</div>
+          <div class="quadrant__items" data-quadrant="important-not-urgent"></div>
+        </div>
+        <div class="quadrant" data-quadrant="urgent-not-important">
+          <div class="quadrant__title" style="color:#b45309">🟡 Urgente & Não Importante</div>
+          <div class="quadrant__items" data-quadrant="urgent-not-important"></div>
+        </div>
+        <div class="quadrant" data-quadrant="not-urgent-not-important">
+          <div class="quadrant__title" style="color:var(--clr-text-muted)">⚪ Não Urgente & Não Importante</div>
+          <div class="quadrant__items" data-quadrant="not-urgent-not-important"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../../assets/app.js"></script>
+  <script src="app.js"></script>
+  <script>
+    renderHeader([
+      { label: 'Início', href: '../../../index.html' },
+      { label: 'Produtividade', href: '../index.html' },
+      { label: 'Eisenhower', href: 'index.html' }
+    ]);
+    renderFooter('../../../');
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Histórias — Vibe Playground</title>
+  <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner"></header>
+
+  <main class="container">
+    <h1 class="mb-1">Gerador de Histórias</h1>
+
+    <div class="game-area">
+      <div class="game-instructions">
+        Seleciona um género e clica "Gerar" para criar um início de história aleatório com personagens e cenários. Perfeito para inspiração criativa!
+      </div>
+
+      <p style="font-size:.88rem;font-weight:600;margin-bottom:.5rem">Género:</p>
+      <div id="genre-chips" class="story-chips"></div>
+
+      <div class="mt-2" style="text-align:center">
+        <button id="generate-btn" class="btn btn-primary" style="font-size:1rem;padding:.65rem 2rem">Gerar História</button>
+      </div>
+
+      <div id="story-output" class="story-output" aria-live="polite">
+        <p style="color:var(--clr-text-muted);text-align:center">Clica em "Gerar História" para começar...</p>
+      </div>
+
+      <div style="text-align:center">
+        <button id="copy-btn" class="btn btn-success btn-sm">Copiar Texto</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../../assets/app.js"></script>
+  <script src="app.js"></script>
+  <script>
+    renderHeader([
+      { label: 'Início', href: '../../../index.html' },
+      { label: 'Criatividade', href: '../index.html' },
+      { label: 'Histórias', href: 'index.html' }
+    ]);
+    renderFooter('../../../');
+  </script>
+</body>
+</html>

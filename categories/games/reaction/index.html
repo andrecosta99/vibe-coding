@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tempo de Reação — Vibe Playground</title>
+  <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner"></header>
+
+  <main class="container">
+    <h1 class="mb-1">Tempo de Reação</h1>
+
+    <!-- Setup -->
+    <div id="setup-area" class="game-area">
+      <div class="game-instructions">
+        Testa a tua velocidade! Espera pelo alvo e clica o mais rápido possível. São 5 rondas — o tema muda o tipo de alvo.
+      </div>
+      <div class="form-group">
+        <label for="theme-select">Tema</label>
+        <select id="theme-select" aria-label="Selecionar tema"></select>
+      </div>
+      <p class="mb-1" style="font-size:.85rem;color:var(--clr-text-muted)">Melhor média: <strong id="best-info">—</strong></p>
+      <button id="start-btn" class="btn btn-primary">Começar</button>
+    </div>
+
+    <!-- Game -->
+    <div id="game-area" class="game-area hidden">
+      <div class="stats-bar">
+        <span>Ronda: <strong id="round-num">1/5</strong></span>
+        <span id="round-msg" style="color:var(--clr-text-muted)" aria-live="polite">Espera pelo alvo…</span>
+      </div>
+      <div id="reaction-zone" class="reaction-zone" role="region" aria-label="Zona de reação"></div>
+    </div>
+
+    <!-- Result -->
+    <div id="result-area" class="game-area result-screen hidden">
+      <h2>Resultados</h2>
+      <div class="score" id="final-avg">0 ms</div>
+      <p>Média de tempo de reação</p>
+      <ul id="final-list" style="list-style:none;margin:1rem 0;font-size:.9rem"></ul>
+      <p id="final-best" style="color:var(--clr-primary);font-weight:600"></p>
+      <div class="result-actions">
+        <button id="restart-btn" class="btn btn-primary">Jogar Novamente</button>
+        <button id="change-theme-btn" class="btn btn-success">Mudar Tema</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../../assets/app.js"></script>
+  <script src="data.js"></script>
+  <script src="game.js"></script>
+  <script>
+    renderHeader([
+      { label: 'Início', href: '../../../index.html' },
+      { label: 'Jogos', href: '../index.html' },
+      { label: 'Reação', href: 'index.html' }
+    ]);
+    renderFooter('../../../');
+  </script>
+</body>
+</html>

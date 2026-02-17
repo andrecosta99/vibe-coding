@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtividade — Vibe Playground</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner"></header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Produtividade</h1>
+      <p>Quatro ferramentas para organizar o teu dia-a-dia e aumentar o foco.</p>
+    </section>
+
+    <div class="card-grid" role="list">
+      <a href="checklist/index.html" class="card" role="listitem" aria-label="Checklist de Projeto">
+        <div class="card__icon">📋</div>
+        <div class="card__title">Checklist de Projeto</div>
+        <div class="card__desc">Cria checklists com modelos reutilizáveis, barra de progresso e persistência.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+
+      <a href="eisenhower/index.html" class="card" role="listitem" aria-label="Matriz de Eisenhower">
+        <div class="card__icon">📊</div>
+        <div class="card__title">Matriz de Eisenhower</div>
+        <div class="card__desc">Organiza tarefas em 4 quadrantes com drag &amp; drop e tags.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+
+      <a href="todo/index.html" class="card" role="listitem" aria-label="Lista de Tarefas">
+        <div class="card__icon">✅</div>
+        <div class="card__title">Lista de Tarefas</div>
+        <div class="card__desc">To-Do completo com prioridades, estados, filtros e pesquisa.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+
+      <a href="pomodoro/index.html" class="card" role="listitem" aria-label="Pomodoro + Deep Work">
+        <div class="card__icon">⏱️</div>
+        <div class="card__title">Pomodoro + Deep Work</div>
+        <div class="card__desc">Timer de foco com modos 25/5, 50/10, personalizado e histórico.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+    </div>
+  </main>
+
+  <script src="../../assets/app.js"></script>
+  <script>
+    renderHeader([
+      { label: 'Início', href: '../../index.html' },
+      { label: 'Produtividade', href: 'index.html' }
+    ]);
+    renderFooter('../../');
+  </script>
+</body>
+</html>

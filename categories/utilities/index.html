@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utilitários — Vibe Playground</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner"></header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Utilitários</h1>
+      <p>Ferramentas práticas do dia-a-dia: conversores, geradores e calculadora.</p>
+    </section>
+
+    <div class="card-grid" role="list">
+      <a href="converter/index.html" class="card" role="listitem" aria-label="Conversor de Unidades">
+        <div class="card__icon">🔄</div>
+        <div class="card__title">Conversor de Unidades</div>
+        <div class="card__desc">Converte comprimento, peso, temperatura e volume entre unidades.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+
+      <a href="password/index.html" class="card" role="listitem" aria-label="Gerador de Palavras-passe">
+        <div class="card__icon">🔑</div>
+        <div class="card__title">Gerador de Palavras-passe</div>
+        <div class="card__desc">Gera palavras-passe seguras com opções personalizáveis.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+
+      <a href="random/index.html" class="card" role="listitem" aria-label="Gerador Aleatório">
+        <div class="card__icon">🎲</div>
+        <div class="card__title">Gerador Aleatório</div>
+        <div class="card__desc">Números, nomes, cores e dados — tudo aleatório.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+
+      <a href="calculator/index.html" class="card" role="listitem" aria-label="Calculadora">
+        <div class="card__icon">📐</div>
+        <div class="card__title">Calculadora</div>
+        <div class="card__desc">Calculadora funcional com interface clássica.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+    </div>
+  </main>
+
+  <script src="../../assets/app.js"></script>
+  <script>
+    renderHeader([
+      { label: 'Início', href: '../../index.html' },
+      { label: 'Utilitários', href: 'index.html' }
+    ]);
+    renderFooter('../../');
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Unidades — Vibe Playground</title>
+  <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner"></header>
+
+  <main class="container">
+    <h1 class="mb-1">Conversor de Unidades</h1>
+
+    <div class="game-area">
+      <div class="game-instructions">
+        Seleciona a categoria, as unidades de origem e destino, introduz o valor e vê o resultado instantaneamente.
+      </div>
+
+      <div class="form-group">
+        <label for="category">Categoria</label>
+        <select id="category" aria-label="Categoria"></select>
+      </div>
+
+      <div class="converter-row">
+        <div class="form-group">
+          <label for="value-input">Valor</label>
+          <input type="number" id="value-input" value="1" step="any" aria-label="Valor a converter">
+        </div>
+        <div class="form-group">
+          <label for="from-unit">De</label>
+          <select id="from-unit" aria-label="Unidade de origem"></select>
+        </div>
+        <div class="form-group">
+          <label for="to-unit">Para</label>
+          <select id="to-unit" aria-label="Unidade de destino"></select>
+        </div>
+      </div>
+
+      <div id="result" class="converter-result">—</div>
+    </div>
+  </main>
+
+  <script src="../../../assets/app.js"></script>
+  <script src="app.js"></script>
+  <script>
+    renderHeader([
+      { label: 'Início', href: '../../../index.html' },
+      { label: 'Utilitários', href: '../index.html' },
+      { label: 'Conversor', href: 'index.html' }
+    ]);
+    renderFooter('../../../');
+  </script>
+</body>
+</html>

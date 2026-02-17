@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batida Musical — Vibe Playground</title>
+  <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner"></header>
+
+  <main class="container">
+    <h1 class="mb-1">Batida Musical</h1>
+
+    <div class="game-area">
+      <div class="game-instructions">
+        Cria padrões rítmicos clicando nas células da grelha. Cada linha é um instrumento. Carrega em "Play" para ouvir o resultado. Usa o AudioContext (Web Audio API) para gerar sons — sem ficheiros externos.
+      </div>
+
+      <div id="beat-grid"></div>
+
+      <div class="beat-controls">
+        <button id="play-btn" class="btn btn-primary">▶ Play</button>
+        <button id="stop-btn" class="btn btn-sm" style="background:var(--clr-border)" disabled>⏹ Stop</button>
+        <button id="clear-grid-btn" class="btn btn-danger btn-sm">Limpar</button>
+        <div class="range-row" style="margin:0;flex:1;min-width:150px">
+          <label style="font-size:.82rem;font-weight:600">BPM:</label>
+          <input type="range" id="bpm-range" min="60" max="180" value="120">
+          <span class="range-value" id="bpm-value">120</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../../assets/app.js"></script>
+  <script src="app.js"></script>
+  <script>
+    renderHeader([
+      { label: 'Início', href: '../../../index.html' },
+      { label: 'Criatividade', href: '../index.html' },
+      { label: 'Batida', href: 'index.html' }
+    ]);
+    renderFooter('../../../');
+  </script>
+</body>
+</html>

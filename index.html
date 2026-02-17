@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibe Playground</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner"></header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Vibe Playground</h1>
+      <p>Micro-produtos digitais criados com IA, código e lógica funcional. Desenvolvidos com Claude Code e TRAE AI e lançados em produção no Netlify.</p>
+    </section>
+
+    <div class="card-grid grid-2x2" role="list">
+      <!-- Educational Games -->
+      <a href="categories/games/index.html" class="card" role="listitem" aria-label="Jogos Educativos">
+        <div class="card__icon">🎮</div>
+        <div class="card__title">Jogos Educativos</div>
+        <div class="card__desc">Quiz, memória, tempo de reação e ordenação — 4 mini-jogos com vários temas.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+      <!-- Productivity -->
+      <a href="categories/productivity/index.html" class="card" role="listitem" aria-label="Produtividade">
+        <div class="card__icon">📋</div>
+        <div class="card__title">Produtividade</div>
+        <div class="card__desc">Ferramentas para organizar o teu dia-a-dia.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+      <!-- Utilities -->
+      <a href="categories/utilities/index.html" class="card" role="listitem" aria-label="Utilitários">
+        <div class="card__icon">🔧</div>
+        <div class="card__title">Utilitários</div>
+        <div class="card__desc">Conversores, geradores e pequenos helpers.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+      <!-- Creativity -->
+      <a href="categories/creativity/index.html" class="card" role="listitem" aria-label="Criatividade">
+        <div class="card__icon">🎨</div>
+        <div class="card__title">Criatividade</div>
+        <div class="card__desc">Ferramentas criativas para desenhar, pintar e experimentar.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+    </div>
+  </main>
+
+  <script src="assets/app.js"></script>
+  <script>
+    renderHeader([{ label: 'Início', href: 'index.html' }]);
+    renderFooter('');
+  </script>
+</body>
+</html>

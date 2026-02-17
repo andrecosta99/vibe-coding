@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora — Vibe Playground</title>
+  <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner"></header>
+
+  <main class="container">
+    <h1 class="mb-1">Calculadora</h1>
+
+    <div class="game-area">
+      <div class="game-instructions">
+        Uma calculadora funcional com as operações básicas. Também podes usar o teclado.
+      </div>
+
+      <div class="calc-grid" role="application" aria-label="Calculadora">
+        <div class="calc-display" id="display" aria-live="polite">0</div>
+        <button class="calc-btn clear" data-action="clear">C</button>
+        <button class="calc-btn" data-action="backspace">⌫</button>
+        <button class="calc-btn" data-action="percent">%</button>
+        <button class="calc-btn operator" data-action="operator" data-value="/">÷</button>
+        <button class="calc-btn" data-action="digit" data-value="7">7</button>
+        <button class="calc-btn" data-action="digit" data-value="8">8</button>
+        <button class="calc-btn" data-action="digit" data-value="9">9</button>
+        <button class="calc-btn operator" data-action="operator" data-value="*">×</button>
+        <button class="calc-btn" data-action="digit" data-value="4">4</button>
+        <button class="calc-btn" data-action="digit" data-value="5">5</button>
+        <button class="calc-btn" data-action="digit" data-value="6">6</button>
+        <button class="calc-btn operator" data-action="operator" data-value="-">−</button>
+        <button class="calc-btn" data-action="digit" data-value="1">1</button>
+        <button class="calc-btn" data-action="digit" data-value="2">2</button>
+        <button class="calc-btn" data-action="digit" data-value="3">3</button>
+        <button class="calc-btn operator" data-action="operator" data-value="+">+</button>
+        <button class="calc-btn span-2" data-action="digit" data-value="0">0</button>
+        <button class="calc-btn" data-action="decimal">.</button>
+        <button class="calc-btn equals" data-action="equals">=</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../../assets/app.js"></script>
+  <script src="app.js"></script>
+  <script>
+    renderHeader([
+      { label: 'Início', href: '../../../index.html' },
+      { label: 'Utilitários', href: '../index.html' },
+      { label: 'Calculadora', href: 'index.html' }
+    ]);
+    renderFooter('../../../');
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordenação — Vibe Playground</title>
+  <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner"></header>
+
+  <main class="container">
+    <h1 class="mb-1">Ordenação (Drag &amp; Drop)</h1>
+
+    <!-- Setup -->
+    <div id="setup-area" class="game-area">
+      <div class="game-instructions">
+        Arrasta os itens para a ordem correta. Clica "Verificar" para ver quantos estão bem posicionados.
+      </div>
+      <div class="form-group">
+        <label for="theme-select">Tema</label>
+        <select id="theme-select" aria-label="Selecionar tema"></select>
+      </div>
+      <p class="mb-1" style="font-size:.85rem;color:var(--clr-text-muted)">Melhor pontuação: <strong id="best-info">—</strong></p>
+      <button id="start-btn" class="btn btn-primary">Começar</button>
+    </div>
+
+    <!-- Game -->
+    <div id="game-area" class="game-area hidden">
+      <p style="font-size:.85rem;color:var(--clr-text-muted);margin-bottom:.5rem">Arrasta os itens para a ordem correta:</p>
+      <ul id="ordering-list" class="ordering-list" role="list"></ul>
+      <div style="margin-top:1rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
+        <button id="validate-btn" class="btn btn-primary">Verificar</button>
+        <span id="feedback" style="font-weight:600;font-size:.9rem" aria-live="polite"></span>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div id="result-area" class="game-area result-screen hidden">
+      <h2>Tudo certo!</h2>
+      <div class="score" id="final-score">0/0</div>
+      <p id="final-best" style="color:var(--clr-primary);font-weight:600"></p>
+      <div class="result-actions">
+        <button id="restart-btn" class="btn btn-primary">Jogar Novamente</button>
+        <button id="change-theme-btn" class="btn btn-success">Mudar Tema</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../../assets/app.js"></script>
+  <script src="data.js"></script>
+  <script src="game.js"></script>
+  <script>
+    renderHeader([
+      { label: 'Início', href: '../../../index.html' },
+      { label: 'Jogos', href: '../index.html' },
+      { label: 'Ordenação', href: 'index.html' }
+    ]);
+    renderFooter('../../../');
+  </script>
+</body>
+</html>

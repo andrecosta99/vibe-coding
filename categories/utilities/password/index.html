@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Palavras-passe — Vibe Playground</title>
+  <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner"></header>
+
+  <main class="container">
+    <h1 class="mb-1">Gerador de Palavras-passe</h1>
+
+    <div class="game-area">
+      <div class="game-instructions">
+        Gera palavras-passe seguras. Ajusta o comprimento e as opções, depois copia o resultado.
+      </div>
+
+      <div class="range-row">
+        <label for="length-range" style="font-weight:600;font-size:.9rem">Comprimento:</label>
+        <input type="range" id="length-range" min="4" max="64" value="16">
+        <span class="range-value" id="length-value">16</span>
+      </div>
+
+      <div class="password-options">
+        <label><input type="checkbox" id="opt-upper" checked> Maiúsculas (A-Z)</label>
+        <label><input type="checkbox" id="opt-lower" checked> Minúsculas (a-z)</label>
+        <label><input type="checkbox" id="opt-digits" checked> Números (0-9)</label>
+        <label><input type="checkbox" id="opt-symbols" checked> Símbolos (!@#…)</label>
+      </div>
+
+      <div class="password-display" id="password-display" aria-live="polite">—</div>
+
+      <div style="display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap">
+        <button id="generate-btn" class="btn btn-primary">Gerar Nova</button>
+        <button id="copy-btn" class="btn btn-success">Copiar</button>
+      </div>
+
+      <div style="margin-top:.75rem">
+        <p style="font-size:.82rem;font-weight:600;color:var(--clr-text-muted)">Força:</p>
+        <div id="strength-bar" class="password-strength" style="background:var(--clr-border)"></div>
+        <p id="strength-label" style="font-size:.8rem;color:var(--clr-text-muted);margin-top:.25rem">—</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../../assets/app.js"></script>
+  <script src="app.js"></script>
+  <script>
+    renderHeader([
+      { label: 'Início', href: '../../../index.html' },
+      { label: 'Utilitários', href: '../index.html' },
+      { label: 'Palavras-passe', href: 'index.html' }
+    ]);
+    renderFooter('../../../');
+  </script>
+</body>
+</html>

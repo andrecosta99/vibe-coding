@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogos Educativos — Vibe Playground</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner"></header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Jogos Educativos</h1>
+      <p>Quatro mini-jogos com múltiplos temas. Escolhe um e diverte-te!</p>
+    </section>
+
+    <div class="card-grid" role="list">
+      <a href="quiz/index.html" class="card" role="listitem" aria-label="Quiz Multi-tema">
+        <div class="card__icon">❓</div>
+        <div class="card__title">Quiz Multi-tema</div>
+        <div class="card__desc">Responde a 10 perguntas de escolha múltipla sobre vários temas.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+
+      <a href="memory/index.html" class="card" role="listitem" aria-label="Jogo da Memória">
+        <div class="card__icon">🧠</div>
+        <div class="card__title">Jogo da Memória</div>
+        <div class="card__desc">Encontra os pares de cartas. Modo fácil e difícil disponíveis.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+
+      <a href="reaction/index.html" class="card" role="listitem" aria-label="Tempo de Reação">
+        <div class="card__icon">⚡</div>
+        <div class="card__title">Tempo de Reação</div>
+        <div class="card__desc">5 rondas para testar a tua velocidade de reação.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+
+      <a href="ordering/index.html" class="card" role="listitem" aria-label="Ordenação">
+        <div class="card__icon">🔢</div>
+        <div class="card__title">Ordenação (Drag &amp; Drop)</div>
+        <div class="card__desc">Arrasta e solta os itens na ordem correta.</div>
+        <span class="btn btn-primary btn-sm">Abrir</span>
+      </a>
+    </div>
+  </main>
+
+  <script src="../../assets/app.js"></script>
+  <script>
+    renderHeader([
+      { label: 'Início', href: '../../index.html' },
+      { label: 'Jogos Educativos', href: 'index.html' }
+    ]);
+    renderFooter('../../');
+  </script>
+</body>
+</html>
